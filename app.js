@@ -17,15 +17,15 @@ form.addEventListener('submit', event  => {
             questions[index + 1].style.color = "#00FF00"
             form.insertAdjacentElement('afterend', tempParagraph)
             tempParagraph.style.fontSize = "2rem"
-            tempParagraph.textContent = `Sua nota foi ${score}`
-            tempParagraph.style.color = '##00FF00'
+            tempParagraph.textContent = `Você acertou ${score}% das questões`
+            tempParagraph.style.color = '#41ead4'
             return
         }
         questions[index + 1].style.color = "#FF0000"
         form.insertAdjacentElement('afterend', tempParagraph)
+        tempParagraph.style.fontSize = "2rem"
+        tempParagraph.textContent = `Você acertou ${score} % das questões`
         tempParagraph.style.color = '#41ead4'
-        tempParagraph.textContent = `Sua nota foi ${score}`
 
     })
-    console.log(score)
 })
